@@ -4,7 +4,6 @@ import { nanoid } from "nanoid";
 
 const StoryUpload = ({ setStories }) => {
   const [file, setFile] = useState(null);
-  const [caption, setCaption] = useState("");
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
