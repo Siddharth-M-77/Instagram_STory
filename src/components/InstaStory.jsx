@@ -11,7 +11,7 @@ const InstaStory = ({ stories }) => (
     </div>
     <div className="text-center mt-6">
       <Link to="/upload">
-        <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+        <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 ">
           Upload Story
         </button>
       </Link>

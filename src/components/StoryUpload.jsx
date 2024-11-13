@@ -17,9 +17,7 @@ const StoryUpload = ({ setStories }) => {
   const handleUpload = () => {
     const newStory = {
       id: nanoid(),
-      file,
-      caption,
-      createdAt: Date.now(),
+      file
     };
     setStories((prev) => [...prev, newStory]);
     navigate("/");
@@ -38,13 +36,6 @@ const StoryUpload = ({ setStories }) => {
           <img src={file} alt="Preview" className="w-full max-w-md rounded-lg" />
         </div>
       )}
-      <input
-        type="text"
-        placeholder="Add a caption..."
-        className="border rounded-md p-2 w-full my-2"
-        value={caption}
-        onChange={(e) => setCaption(e.target.value)}
-      />
       <button
         className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
         onClick={handleUpload}
