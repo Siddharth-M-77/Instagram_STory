@@ -19,10 +19,6 @@ const StoryView = ({ stories, setStories }) => {
     }
   }, []);
 
-  const handleDelete = () => {
-    setStories((prev) => prev.filter((s) => s.id !== storyId));
-    navigate("/");
-  };
 
   return (
     story && (

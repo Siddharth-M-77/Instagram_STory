@@ -16,7 +16,7 @@ const StoryUpload = ({ setStories }) => {
   const handleUpload = () => {
     const newStory = {
       id: nanoid(),
-      file
+      file,
     };
     setStories((prev) => [...prev, newStory]);
     navigate("/");
@@ -32,7 +32,11 @@ const StoryUpload = ({ setStories }) => {
       />
       {file && (
         <div className="my-4">
-          <img src={file} alt="Preview" className="w-full max-w-md rounded-lg" />
+          <img
+            src={file}
+            alt="Preview"
+            className="w-full max-w-md rounded-lg"
+          />
         </div>
       )}
       <button
