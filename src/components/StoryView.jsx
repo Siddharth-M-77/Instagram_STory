@@ -5,6 +5,7 @@ const StoryView = ({ stories, setStories }) => {
   const { storyId } = useParams();
   const [story, setStory] = useState(null);
   const navigate = useNavigate();
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     const foundStory = stories.find((s) => s.id === storyId);
@@ -40,7 +41,10 @@ const StoryView = ({ stories, setStories }) => {
             alt="Story"
             className={`w-full h-auto rounded ${story.filter}`}
           />
-          <div className="flex justify-center items-center mt-4">
+          <div className="flex justify-between items-center mt-4">
+            <button onClick={() => setLiked(!liked)} className="text-red-500">
+              {liked ? "❤️" : "🤍"}
+            </button>
             <button
               onClick={handleDelete}
               className="text-white rounded-lg px-6 py-2 bg-red-500 hover:bg-red-600"
