@@ -20,15 +20,20 @@ const StoryUpload = ({ setStories }) => {
       id: nanoid(),
       file,
       filter,
-      createdAt:Date.now()
+      createdAt: Date.now(),
     };
     setStories((prev) => [...prev, newStory]);
     navigate("/");
   };
 
   return (
-    <div className="p-6 flex flex-col items-center">
-      <input type="file" accept="image/*,video/*" onChange={handleFileChange} />
+    <div className="p-6 flex flex-col items-center justify-center gap-5  shadow-lg bg-white w-fit mx-auto ">
+      <input
+        className="p-4 border border-dashed border-gray-600"
+        type="file"
+        accept="image/*,video/*"
+        onChange={handleFileChange}
+      />
       {file && (
         <div className={`my-4 ${filter}`}>
           <img

@@ -9,7 +9,7 @@ const InstaStory = ({ stories }) => (
         <StoryItem key={story.id} story={story} />
       ))}
     </div>
-    <div className="text-center mt-6">
+    <div className="text-center mt-72">
       <Link to="/upload">
         <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 ">
           Upload Story

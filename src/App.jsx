@@ -8,7 +8,8 @@ const App = () => {
   const [stories, setStories] = useState([]);
 
   return (
-    <Router>
+    <div className="bg-gray-700 w-screen h-screen">
+      <Router>
       <Routes>
         <Route path="/" element={<InstaStory stories={stories} />} />
         <Route
@@ -21,6 +22,8 @@ const App = () => {
         />
       </Routes>
     </Router>
+    </div>
+    
   );
 };
 
